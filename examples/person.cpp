@@ -6,16 +6,16 @@ Person::Person():Model()
 			.set_as_pk()
 			.max_length(2000000);
 
-    username = CharField("username")
+	username = CharField("username")
                	.max_length(255);
 
-    password = CharField("password")
+	password = CharField("password")
                	.max_length(255);
 
-    name = CharField("name")
+	name = CharField("name")
            	.max_length(255);
 
-    lastname = CharField("lastname")
+	lastname = CharField("lastname")
                 .max_length(255);
 
 	job = CharField("job")
