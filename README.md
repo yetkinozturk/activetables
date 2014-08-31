@@ -51,4 +51,13 @@ Active Record implemantation in C++ with a Django ORM like fashion.
               .default_value(""); 
 
     };
-    
+
+
+Dependencies:
+============
+
+Project's first target is Postgresql.
+
+For Debian based Linux distros:
+
+sudo apt-get install autoconf automake libpqxx-3.1 libpqxx3-dev libgmpxx4ldbl libgmp3-dev libapr1 libaprutil1 libtool
