@@ -1,6 +1,6 @@
 CC      = g++
 CFLAGS  = -I ./
-LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1 -llog4cxx -lconfig++
+LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1
 all: example.app
 
 example.app: main.o basefield.o field.o model.o person.o
