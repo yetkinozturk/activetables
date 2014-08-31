@@ -10,7 +10,6 @@ example.app: main.o basefield.o field.o model.o person.o
 	@echo "==============="
 	@echo ""
 	$(CC) --std=gnu++11 -Wall -O3 -o $@ $^ $(LDFLAGS)
-	rm *.o
 
 main.o: models/fields/basefield.cpp models/fields/field.cpp models/model.cpp examples/person.cpp examples/main.cpp
 	@echo ""
