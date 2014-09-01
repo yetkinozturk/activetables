@@ -9,9 +9,9 @@ class Person : public Model
 private:
 	Field id;
 	Field username; 
-    Field password;
-    Field name;
-    Field lastname;
+	Field password;
+	Field name;
+	Field lastname;
 	Field job;
 public:
 	Person();
