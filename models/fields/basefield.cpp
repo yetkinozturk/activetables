@@ -1,8 +1,9 @@
 #include <string>
+#include <functional>
 #include "basefield.h"
 
-Field::Field (std::string const& name, FieldType type) : _type(type), _name(name), _null_true(false), _blank_true(false), _is_pk(false) {
-
+Field::Field (std::string const& name, FieldType type) : _type(type), _name(name), _null_true(false), _blank_true(false) {
+    _id = hash_fn(name);
 }
 
 inline Field& Field::max_length(const size_t& len) {
@@ -30,9 +31,5 @@ inline Field& Field::default_value (const std::string&  default_value) {
 	return *this;
 }
 
-inline Field& Field::set_as_pk() {
-	_is_pk = true;
-	return *this;
-}
 Field::~Field(){}
 
