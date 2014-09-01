@@ -2,6 +2,11 @@ activetables
 ============
 Active Record implemantation in C++ with a Django ORM like fashion.
 
+Active Record: http://www.martinfowler.com/eaaCatalog/activeRecord.html
+
+Django ORM: https://docs.djangoproject.com/en/dev/topics/db/models/
+
+
     #ifndef __PERSON__H_
     #define __PERSON__H_
     #include "models/fields/field.h"
