@@ -3,7 +3,11 @@ CFLAGS  = -I ./
 LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1
 all: example.app
 
-example.app: main.o basefield.o field.o model.o person.o
+example.app: main.o\
+             basefield.o\
+             field.o\
+             model.o\
+             person.o
 	@echo ""
 	@echo "==============="
 	@echo "Linking Objects"
@@ -11,7 +15,9 @@ example.app: main.o basefield.o field.o model.o person.o
 	@echo ""
 	$(CC) --std=gnu++11 -Wall -O3 -o $@ $^ $(LDFLAGS)
 
-main.o: models/fields/basefield.cpp models/fields/field.cpp models/model.cpp examples/person.cpp examples/main.cpp
+main.o: backends/basebackend.cpp backends/postgresql.cpp\
+        models/fields/basefield.cpp models/fields/field.cpp models/model.cpp\
+        examples/person.cpp examples/main.cpp
 	@echo ""
 	@echo "================="
 	@echo "Compiling Sources"

@@ -1,0 +1,18 @@
+version = "0.1"
+
+activetables :
+{
+    backend_options :
+    {
+        "backend":"postgresql",
+        "username":"xxx",
+        "password":"password",
+        "port":"1234",
+        "host":"127.0.0.1",
+        "dbname":"activetablesdemo"
+    }
+    model_list :
+    [
+        "person"
+    ]
+}

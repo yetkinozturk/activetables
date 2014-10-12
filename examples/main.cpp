@@ -2,10 +2,9 @@
 #include <string>
 #include "examples/person.h"
 
-using namespace std;
 int main () 
 {	
-	cout<<"model demo"<<endl;
+    std::cout<<"model demo"<<std::endl;
 
 	Person *p1 = new Person();
 	delete p1;
