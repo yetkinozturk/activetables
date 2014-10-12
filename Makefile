@@ -15,7 +15,8 @@ example.app: main.o\
 	@echo ""
 	$(CC) --std=gnu++11 -Wall -O3 -o $@ $^ $(LDFLAGS)
 
-main.o: backends/basebackend.cpp backends/postgresql.cpp\
+main.o: config/configure.cpp\
+        backends/basebackend.cpp backends/postgresql.cpp\
         models/fields/basefield.cpp models/fields/field.cpp models/model.cpp\
         examples/person.cpp examples/main.cpp
 	@echo ""
