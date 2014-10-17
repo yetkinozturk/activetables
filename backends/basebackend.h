@@ -3,7 +3,7 @@
 
 #include <list>
 
-class Backend
+class DBBackend
 {
 
 private:
@@ -11,9 +11,9 @@ private:
 public:
 
     //Constructors:
-    Backend();
+    DBBackend();
 
-    Backend(std::map<std::string,std::string> config);
+    DBBackend(std::map<std::string,std::string> config);
     
     //Get specific config
     std::string getConfig(std::string key);
@@ -37,7 +37,7 @@ public:
     virtual bool disconnect() = 0;
 
     //Destructor:
-    virtual ~Backend();
+    virtual ~DBBackend();
 
 };
 

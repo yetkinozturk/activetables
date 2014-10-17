@@ -9,7 +9,7 @@ PostgresqlBackend::PostgresqlBackend(){
 }
 
 PostgresqlBackend::PostgresqlBackend(std::map<std::string,std::string> config)
-		:config( config ) 
+		:DBBackend( config ) 
 {
 	conn = nullptr;
 }
@@ -67,14 +67,6 @@ pqxx::connection* PostgresqlBackend::getConnection() {
 	return conn;
 }
 
-std::string PostgresqlBackend::getConfig(std::string key) {
-	auto it = config.find(key);
-	if (it != std::end(config)){
-		return config[key];
-	} else {
-		return "UNKNOWN";
-	}
-}
 
 //Destructor:
 PostgresqlBackend::~PostgresqlBackend() {

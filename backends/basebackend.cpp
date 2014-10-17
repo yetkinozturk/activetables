@@ -5,27 +5,27 @@
 
 	
 //Constructors:
-Backend::Backend(){
+DBBackend::DBBackend(){
 
 }
 
-Backend::Backend(std::map<std::string,std::string> config)
+DBBackend::DBBackend(std::map<std::string,std::string> config)
 		:config( config ) 
 {
 
 }
 
 
-std::string Backend::getConfig(std::string key) {
+std::string DBBackend::getConfig(std::string key) {
 	auto it = config.find(key);
 	if (it != std::end(config)){
 		return config[key];
 	} else {
-		return "UNKNOWN";
+		return "UNKNOWN CONFIGURATION OPTION";
 	}
 }
 
 //Destructor:
-Backend::~Backend() {
+DBBackend::~DBBackend() {
 }
 

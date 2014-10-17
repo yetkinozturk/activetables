@@ -3,7 +3,7 @@
 
 #include "basebackend.h"
 
-class PostgresqlBackend : public Backend
+class PostgresqlBackend : public DBBackend
 {
 
 private:
