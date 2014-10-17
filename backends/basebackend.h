@@ -8,11 +8,10 @@ class DBBackend
 
 private:
     std::map<std::string,std::string> config;
-public:
 
+public:
     //Constructors:
     DBBackend();
-
     DBBackend(std::map<std::string,std::string> config);
     
     //Get specific config

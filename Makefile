@@ -1,6 +1,6 @@
 CC      = g++
 CFLAGS  = -I ./
-LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1
+LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1 -lgflags
 all: example.app
 
 example.app: main.o\
