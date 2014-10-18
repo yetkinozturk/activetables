@@ -1,7 +1,7 @@
 CC      = g++
 CFLAGS  = -I ./
-LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1 -lgflags
-all: example.app
+LDFLAGS = -lpqxx -lpq -laprutil-1 -lexpat -lapr-1
+all: example.app manage.app
 
 example.app: main.o\
              basefield.o\
@@ -26,6 +26,20 @@ main.o: config/configure.cpp\
 	@echo ""
 	$(CC) --std=gnu++11 -Wall -O3 -c $(CFLAGS) $^ 
 
+manage.app: manage.o
+	@echo ""
+	@echo "=================="
+	@echo "Linking manage.app"
+	@echo "=================="
+	$(CC) --std=gnu++11 -Wall -O3 -o $@ $^ $(LDFLAGS) -lgflags
+
+manage.o: manage/manage.cpp
+	@echo ""
+	@echo "===================="
+	@echo "Compiling manage.app"
+	@echo "===================="
+	$(CC) --std=gnu++11 -Wall -O3 -c $(CFLAGS) $^
+
 .PHONY: clean
 
 clean:
@@ -35,4 +49,4 @@ clean:
 	@echo "==========="
 	@echo ""
 	rm *.o
-	rm example.app
+	rm example.app manage.app
