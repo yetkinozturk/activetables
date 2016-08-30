@@ -61,6 +61,9 @@ Dependencies:
 
 Project's first target is Postgresql.
 
+For MacOS with homebrew
+brew install log4cxx libpqxx libconfig gflags
+
 For Debian based Linux distros:
 
 sudo apt-get install autoconf automake libpqxx-3.1 libpqxx3-dev libgmpxx4ldbl libgmp3-dev libapr1 libaprutil1 libtool libgflags-dev liblog4cxx10-dev
