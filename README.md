@@ -61,7 +61,8 @@ Dependencies:
 
 Project's first target is Postgresql.
 
-For MacOS with homebrew
+For OSX with homebrew
+
 brew install log4cxx libpqxx libconfig gflags
 
 For Debian based Linux distros:
