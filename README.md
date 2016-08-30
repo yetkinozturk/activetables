@@ -63,4 +63,4 @@ Project's first target is Postgresql.
 
 For Debian based Linux distros:
 
-sudo apt-get install autoconf automake libpqxx-3.1 libpqxx3-dev libgmpxx4ldbl libgmp3-dev libapr1 libaprutil1 libtool libgflags-dev
+sudo apt-get install autoconf automake libpqxx-3.1 libpqxx3-dev libgmpxx4ldbl libgmp3-dev libapr1 libaprutil1 libtool libgflags-dev liblog4cxx10-dev
