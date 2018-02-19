@@ -69,7 +69,8 @@ For Debian based Linux distros:
 
 sudo apt-get install cmake libpqxx3-dev libgflags-dev liblog4cxx10-dev
 
-mkdir build
-cd build
-cmake ../
-make
+
+    mkdir build
+    cd build
+    cmake ../
+    make
