@@ -1,6 +1,6 @@
 activetables
 ============
-Active Record implemantation in C++ with a Django ORM like fashion.
+Active Record implementation in C++ with a Django ORM like fashion.
 
 Active Record: http://www.martinfowler.com/eaaCatalog/activeRecord.html
 
@@ -67,4 +67,9 @@ brew install log4cxx libpqxx libconfig gflags
 
 For Debian based Linux distros:
 
-sudo apt-get install autoconf automake libpqxx-3.1 libpqxx3-dev libgmpxx4ldbl libgmp3-dev libapr1 libaprutil1 libtool libgflags-dev liblog4cxx10-dev
+sudo apt-get install cmake libpqxx3-dev libgflags-dev liblog4cxx10-dev
+
+mkdir build
+cd build
+cmake ../
+make
