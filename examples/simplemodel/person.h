@@ -1,8 +1,8 @@
 #ifndef __PERSON__H_
 #define __PERSON__H_
 
-#include "models/fields/field.h"
-#include "models/model.h"
+#include "field.h"
+#include "model.h"
 
 class Person : public Model
 {

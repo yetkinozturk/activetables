@@ -1,8 +1,8 @@
 #include <vector>
 #include <list>
 #include <set>
-#include<stdarg.h>
-#include "models/model.h"
+#include <stdarg.h>
+#include "model.h"
 
 Model::Model(const std::string &model_name)
     :__model_status(INITIAL),

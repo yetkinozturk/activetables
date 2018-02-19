@@ -29,9 +29,13 @@ std::pair< std::map<std::string,std::string>,std::vector<std::string> > getConfi
 
    try
    {
-        const libconfig::Setting& root = cfg.getRoot();
-        const libconfig::Setting &backend = root[ACTIVE_TABLES][BACKEND_OPTIONS];
-        const libconfig::Setting &model_list = root[ACTIVE_TABLES][MODEL_LIST];
+        const libconfig::Setting &root = cfg.getRoot();
+        if (!root.exists(ACTIVE_TABLES))
+        {
+            std::cerr<<"Error while getting backend options from config/config.json"<<std::endl;          
+        }
+        const libconfig::Setting &backend = root["activetables"]["backend_options"];
+        const libconfig::Setting &model_list = root["activetables"]["model_list"];
         std::map<std::string,std::string> _config;
         std::vector <std::string> _model_list;
 

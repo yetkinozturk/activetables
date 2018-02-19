@@ -76,3 +76,12 @@ PostgresqlBackend::~PostgresqlBackend() {
 	}
 }
 
+bool PostgresqlBackend::executeAndFetch(std::string query,
+                             std::list<std::list<std::string> > resultList,
+                             int limit) {
+    return true;
+}
+
+bool PostgresqlBackend::executeOnly(std::string sql) {
+    return true;
+}

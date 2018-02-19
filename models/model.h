@@ -3,8 +3,8 @@
 #include <set>
 #include <list>
 #include <vector>
-#include "models/fields/field.h"
-#include "models/queryset/queryset.h"
+#include "field.h"
+#include "queryset.h"
 
 enum ModelStatus
 {

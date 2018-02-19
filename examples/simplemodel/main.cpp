@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "examples/person.h"
+#include "person.h"
 
 int main () 
 {	

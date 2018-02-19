@@ -22,3 +22,6 @@
 
 # Editor
 *.swp
+
+# Build folder for CMake
+build/
